@@ -42,7 +42,7 @@ jobs:
         run: |
          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag philippstrigunov/pinnacle-bot
+        run: docker build . --file Dockerfile --tag $DOCKER_USER/pinnacle-bot
       - name: Docker Push
-        run: docker push philippstrigunov/pinnacle-bot
+        run: docker push $DOCKER_USER/pinnacle-bot
         
